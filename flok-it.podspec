@@ -16,5 +16,5 @@ Pod::Spec.new do |s|
   s.platform     = :ios
   s.requires_arc = true
 
-  s.dependency 'CocoaLumberjack', '~> 1.3.1'
+  s.dependency 'CocoaLumberjack', :podspec => 'http://raw.github.com/robbiehanson/CocoaLumberjack/master/CocoaLumberjack.podspec'
 end
