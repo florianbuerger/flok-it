@@ -2,7 +2,7 @@ a collection of custom log formatter for cocoa-lumberjack
 
 # FBDefaultLogger
 
-Heavily inspired by Peter Steinberge (@steipete) - http://petersteinberger.com/2010/10/logging-again/
+Heavily inspired by Peter Steinberger - http://petersteinberger.com/2010/10/logging-again/
 
  output looks like:
 
