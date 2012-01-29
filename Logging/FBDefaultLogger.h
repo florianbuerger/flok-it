@@ -1,7 +1,4 @@
 //
-//  FBDefaultLogger.h
-//
-//
 //  Copyright (c) 2012, Florian Buerger
 //  All rights reserved.
 //
