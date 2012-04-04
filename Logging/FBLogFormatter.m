@@ -23,13 +23,13 @@
 //  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
-#import "FBDefaultLogger.h"
+#import "FBLogFormatter.h"
 
 #if ! __has_feature(objc_arc)
 #warning This file must be compiled with ARC. Use -fobjc-arc flag (or convert project to ARC).
 #endif
 
-@implementation FBDefaultLogger
+@implementation FBLogFormatter
 
 - (id)init
 {

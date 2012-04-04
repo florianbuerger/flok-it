@@ -26,7 +26,7 @@
 #import "DDLog.h"
 
 /**
- A cutom formatter for my log messages.
+ A custom formatter for my log messages.
  Heavily inspired by Peter Steinberge (@steipete) - http://petersteinberger.com/2010/10/logging-again/
 
  output looks like:
@@ -40,7 +40,7 @@
  This class need to be compiled with ARC (-fobjc-arc compiler flag)
  Requires cocoalumberjack
  */
-@interface FBDefaultLogger : NSObject <DDLogFormatter>
+@interface FBLogFormatter : NSObject <DDLogFormatter>
 {
     NSDateFormatter *dateFormatter;
 }
