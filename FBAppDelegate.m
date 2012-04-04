@@ -22,29 +22,20 @@
 //  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 //  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-
-/////////////////////////////////////////////////////////////////////////////////////
-#pragma mark - Logging
-/////////////////////////////////////////////////////////////////////////////////////
-
-#import "DDLog.h"
-#import "FBLogFormatter.h"
-
-// global log level
-#ifdef DEBUG
-static const int ddLogLevel = LOG_LEVEL_VERBOSE;
-#else
-static const int ddLogLevel = LOG_LEVEL_WARN;
-#endif
-
-/////////////////////////////////////////////////////////////////////////////////////
-#pragma mark - UI
-/////////////////////////////////////////////////////////////////////////////////////
-
-#import "FBBaseViewController.h"
-
-/////////////////////////////////////////////////////////////////////////////////////
-#pragma mark - Foundation
-/////////////////////////////////////////////////////////////////////////////////////
-
 #import "FBAppDelegate.h"
+#import "DDTTYLogger.h"
+
+@implementation FBAppDelegate
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    // Setup console logger
+    DDTTYLogger *logger = [DDTTYLogger sharedInstance];
+    FBLogFormatter *formatter = [FBLogFormatter new];
+    [logger setLogFormatter:formatter];
+    [DDLog addLogger:logger];
+    
+    return YES;
+}
+
+@end
