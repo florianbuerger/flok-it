@@ -22,18 +22,14 @@
 //  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 //  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+#import <UIKit/UIKit.h>
 
-#import "DDLog.h"
-#import "FBLogFormatter.h"
+/**
+ Does the obvious...
+ */
+@interface UIApplication (NetworkIndicator)
 
-// global log level
-#ifdef DEBUG
-static const int ddLogLevel = LOG_LEVEL_VERBOSE;
-#else
-static const int ddLogLevel = LOG_LEVEL_WARN;
-#endif
+- (void)showNetworkIndicator;
+- (void)hideNetworkIndicator;
 
-#import "UIApplication+NetworkIndicator.h"
-
-#import "FBBaseViewController.h"
-#import "FBAppDelegate.h"
+@end
