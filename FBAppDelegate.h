@@ -24,6 +24,8 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ Custom AppDelegate to start cocoa-lumberjack logging using console logger with FBLogFormatter
+ */
 @interface FBAppDelegate : UIResponder <UIApplicationDelegate>
-
 @end
