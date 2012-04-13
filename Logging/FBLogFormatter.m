@@ -57,14 +57,8 @@
     NSString *dateAndTime = [dateFormatter stringFromDate:logMessage->timestamp];
     NSString *logMsg = logMessage->logMsg;
 
-    return [NSString stringWithFormat:@"%@%@(%s) [%@ %@/%d] %@",
-            logLevel,
-            dateAndTime,
-            logMessage->queueLabel,
-            [logMessage fileName],
-            [logMessage methodName],
-            logMessage->lineNumber,
-            logMsg];
+    NSString *logString = [NSString stringWithFormat:@"%@%@(%s) [%@ %@/%d] %@", logLevel, dateAndTime, logMessage->queueLabel, [logMessage fileName], [logMessage methodName], logMessage->lineNumber, logMsg];
+    return logString;
 }
 
 @end
